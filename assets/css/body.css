@@ -1,0 +1,296 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.text-inicial {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 2s ease-in; /* 2s de animação */
+}
+
+.seta 
+{
+    width: 90px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    animation: fadeIn 2s ease-in; /* 2s de animação */
+}
+
+.seta:hover {
+    transform: scale(1.1); /* aumenta o tamanho da imagem ao passar o mouse */
+}
+
+.seta img {
+    width: 80%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* separa logo na esquerda e o resto na direita */
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.direita {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espaço entre botão e imagens */
+}
+
+.img {
+    width: 56px;
+    margin: 5px;
+    height: auto;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    animation: fadeIn 2s ease-in; /* 2s de animação */
+    
+}
+
+.img:hover {
+    transform: scale(1.1); /* aumenta o tamanho da imagem ao passar o mouse */
+}
+
+
+.img img {
+    width: 80%;
+    height: auto;
+}
+
+.img2 {
+    width: 74px;
+    height: auto;
+    margin: -10px;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+    animation: fadeIn 2s ease-in; /* 2s de animação */
+
+}
+
+.img2:hover {
+    transform: scale(1.1); /* aumenta o tamanho da imagem ao passar o mouse */
+
+}
+
+.img2 img {
+    width: 80%;
+    height: auto;
+}
+
+/* Estilo da logo */
+
+.logo {
+  height: 150px;      /* tamanho padrão no desktop */
+  flex-shrink: 0;    /* evita que a logo encolha */
+  width: auto;       /* mantém a proporção */
+  margin-right: auto;
+  transition: transform 0.5s ease-in-out;
+  animation: fadeIn 2s ease-in; /* 2s de animação */
+}
+
+/* Ajuste para mobile */
+@media (max-width: 768px) {
+  .logo {
+     height: 60px;    /* pode aumentar ou ajustar para ficar legal no mobile */
+      height: 150px;      /* tamanho padrão no desktop */
+      flex-shrink: 0;    /* evita que a logo encolha */
+      width: auto;       /* mantém a proporção */
+      margin-right: auto;
+  }
+}
+
+.logo:hover {
+    transform: scale(1.1); /* aumenta o tamanho da logo ao passar o mouse */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo do botão */
+
+.btn-contact {
+    background-color: black;
+    border-radius: 20px;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+    animation: fadeIn 2s ease-in;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-contact:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* começa um pouco pra baixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* sobe para posição normal */
+    }
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout principal */
+header, section {
+    padding: 20px;
+}
+
+.text-inicial h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.texto-aparecendo {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Adaptação para telas pequenas - Celular */
+@media (max-width: 600px) {
+    /* Ajustes no header */
+    .text-inicial h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-inicial p {
+        font-size: 1rem;
+    }
+
+    /* Menu e navegação */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .direita {
+        margin-top: 20px;
+    }
+
+    .btn-contact {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .img, .img2 {
+        width: 25px;
+        margin: 0 10px;
+    }
+
+    /* Ajustes no "Sobre Mim" */
+    .sobre-mim {
+        padding: 10px;
+    }
+
+    .sobre-mim p {
+        font-size: 1rem;
+    }
+
+    /* Ajustes nos projetos */
+    #projetos ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    #projetos ul li {
+        font-size: 1rem;
+    }
+
+    /* Ajustes nas imagens de habilidades */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    .skill-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .skill-card h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Ajustes no formulário de contato */
+    #contato {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+/* Adaptação para tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* Ajustes no header */
+    .text-inicial h1 {
+        font-size: 2rem;
+    }
+
+    /* Ajustes no "Sobre Mim" */
+    .sobre-mim p {
+        font-size: 1.1rem;
+    }
+
+    /* Ajustes nas imagens de habilidades */
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .skill-card img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .skill-card h3 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    /* Ajustes nos projetos */
+    #projetos ul li {
+        font-size: 1.1rem;
+    }
+}
+
+

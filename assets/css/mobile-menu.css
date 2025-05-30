@@ -1,0 +1,75 @@
+/* MENU MÓVEL */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px; /* escondido inicialmente à direita */
+  width: 250px;
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.25);
+  transition: right 0.3s ease;
+  z-index: 1001; /* acima do overlay */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Quando ativado, aparece */
+.mobile-menu.active {
+  right: 0;
+}
+
+/* OVERLAY */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1000; /* abaixo do menu */
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* BOTÃO TOGGLE */
+.mobile-menu-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1100; /* sempre acima */
+}
+
+/* Menu desktop - padrão */
+.direita {
+  display: flex;
+}
+
+/* Botão hambúrguer escondido no desktop */
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* No mobile: esconde o menu desktop e mostra o botão hambúrguer */
+@media (max-width: 768px) {
+  .direita {
+    display: none; /* esconde o menu desktop */
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* mostra o botão hamburguer */
+  }
+}
+

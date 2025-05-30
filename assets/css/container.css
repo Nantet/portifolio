@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+   .logo {
+     height: 80px;    /* pode aumentar ou ajustar para ficar legal no mobile */
+      flex-shrink: 0;    /* evita que a logo encolha */
+      width: auto;       /* mantém a proporção */
+      margin-right: auto;
+  }
+
+  /* Barra de navegação fixa no topo */
+nav.container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color:#a8a8a893;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(235, 226, 226, 0.4);
+}
+
+/* Logo: tamanho natural, sem espremimento */
+.logo {
+  height: 50px;
+  width: auto;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* Menu à direita, alinhado e espaçado */
+.direita {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Botão contato estilizado */
+.btn-contact {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(123, 122, 121, 0.6);
+}
+
+.btn-contact:hover {
+  background-color: #707070;
+}
+
+/* Ícones LinkedIn e GitHub */
+.direita img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.direita img:hover {
+  filter: brightness(0) invert(0.7);
+}
