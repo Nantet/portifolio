@@ -1,0 +1,64 @@
+/* Container principal para celular */
+.container-mobile {
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Texto com efeito suave ao entrar */
+.texto-aparecendo {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Efeito de entrada */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animações em cascata */
+.texto-aparecendo:nth-child(1) { animation-delay: 0.2s; }
+.texto-aparecendo:nth-child(2) { animation-delay: 0.4s; }
+.texto-aparecendo:nth-child(3) { animation-delay: 0.6s; }
+.texto-aparecendo:nth-child(4) { animation-delay: 0.8s; }
+.texto-aparecendo:nth-child(5) { animation-delay: 1s; }
+
+/* Estilo de responsividade geral */
+@media (max-width: 768px) {
+    .container-mobile {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .skill-card {
+        width: 100%;
+        text-align: center;
+    }
+
+    .direita {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav.container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
