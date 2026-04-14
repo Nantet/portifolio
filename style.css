@@ -167,7 +167,7 @@ h1 {
     text-decoration: none;
 }
 
-.link{
+.link {
     text-decoration: none;
 }
 
@@ -185,7 +185,7 @@ h1 {
     margin: 0 auto;
 }
 
-.projetos-card{
+.projetos-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     backdrop-filter: blur(5px);
@@ -276,9 +276,9 @@ h1 {
     transition: all 0.5s ease;
 }
 
-.button-form:hover{
+.button-form:hover {
     transform: translateY(-4px);
-    box-shadow: 0 5px 15px rgba(53, 80, 143, 0.801) ;
+    box-shadow: 0 5px 15px rgba(53, 80, 143, 0.801);
 }
 
 
@@ -290,18 +290,99 @@ h1 {
     height: 100%;
     z-index: -1;
     opacity: 0.5;
-    background: 
-    radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 30%),
-    radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 30%),
-    var(--maisEscuro);
+    background:
+        radial-gradient(circle at 10% 20%, var(--primaria) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, var(--secundaria) 0%, transparent 30%),
+        var(--maisEscuro);
 }
 
 @keyframes flutuar {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-10%);
+    }
+}
+
+/* --- ADAPTAÇÃO MOBILE --- */
+
+@media (max-width: 768px) {
+
+    /* Ajuste do Menu: No mobile, os links ficam mais próximos */
+    .menu {
+        gap: 1.5rem;
+        font-size: 16px;
+    }
+
+    /* Cabeçalho: Reduzimos as fontes e a foto */
+    h1 {
+        font-size: 2.2rem;
+        margin: 10px 0;
+    }
+
+    .subtitulo {
+        font-size: 1.1rem;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Grid de Tecnologias: 3 por linha no celular */
+    .projetos-caixaa {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .projetos-carda {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .img-tec {
+        width: 40px;
+        height: 40px;
+    }
+
+    .inf-projetos {
+        font-size: 0.9rem;
+        /* Nomes das tecnologias menores */
+    }
+
+    /* Grid de Projetos: 1 por linha (Card completo) */
+    .projetos-caixa {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    /* Sobre Mim: Melhora o espaçamento do texto */
+    .sobre-paragrafo {
+        font-size: 1.1rem;
+        text-align: left;
+        /* No mobile, texto centralizado longo é difícil de ler */
+    }
+
+    /* Formulário: Ocupar 90% da tela */
+    .formulario-contato {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+/* Ajuste para telas muito finas */
+@media (max-width: 400px) {
+    .menu {
+        gap: 1rem;
+        font-size: 14px;
+    }
+
+    .projetos-caixaa {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 por linha se for muito pequeno */
     }
 }
