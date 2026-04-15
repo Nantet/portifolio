@@ -353,19 +353,18 @@ strong {
     border: none;
 }
 
-/* ANIMAÇÕES E SCROLLBAR */
+/* ANIMAÇÃO */
 @keyframes flutuar {
-
-    0%,
-    100% {
+    0%, 100% {
         transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-15px);
+        transform: translateY(-12px);
     }
 }
 
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -375,32 +374,69 @@ strong {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--primaria);
+    background: linear-gradient(180deg, var(--primaria), #6a5cff);
     border-radius: 10px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primaria);
+}
+
 /* RESPONSIVIDADE */
+
+/* Tablets */
 @media (max-width: 768px) {
+
     .menu {
         gap: 1rem;
-        font-size: 16px;
+        font-size: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     h1 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
+        text-align: center;
     }
 
     .foto-perfil {
-        width: 180px;
-        height: 180px;
+        width: 170px;
+        height: 170px;
     }
 
     .projetos-caixaa {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .sobre-paragrafo {
-        font-size: 1.1rem;
-        text-align: left;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.6;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu {
+        font-size: 14px;
+        gap: 0.8rem;
+    }
+
+    .projetos-caixaa {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-paragrafo {
+        font-size: 0.95rem;
     }
 }
